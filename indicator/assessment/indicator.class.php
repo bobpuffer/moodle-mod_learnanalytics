@@ -64,8 +64,11 @@ class indicator_assessment extends indicator {
 
         foreach ($activities as $mod => $items) {
             switch ($mod) {
-                case 'assignment':
+            	case 'assignment':
                     $this->add_assignments($items);
+                    break;
+                case 'assign':
+                    $this->add_assigns($items);
                     break;
                 case 'quiz':
                     $this->add_quizzes($items);
@@ -120,6 +123,36 @@ class indicator_assessment extends indicator {
         }
     }
 
+    private function add_assigns($grade_items) {
+        global $DB;
+
+        $submissions = array();
+        foreach ($grade_items as $gi) {
+            $assign_ids[$gi->iteminstance] = $gi;
+            $submissions[$gi->iteminstance] = array();
+        }
+        list($insql, $params) = $DB->get_in_or_equal(array_keys($assign_ids));
+        $sql = "SELECT        id, duedate, name
+                FROM          {assign}
+                WHERE         id $insql";
+        $assigns = $DB->get_records_sql($sql, $params);
+        // Collect up the submissions.
+        $subs = $DB->get_records_sql("
+          SELECT        sub.id, sub.assignment, sub.userid, sub.timemodified, a.duedate
+          FROM          {assign_submission} sub, {assign} a
+          WHERE         a.id = sub.assignment
+            AND         assignment $insql", $params);
+        foreach ($subs as $s) {
+            $submissions[$s->assignment][$s->userid]['submitted'] = $s->timemodified;
+            $submissions[$s->assignment][$s->userid]['due'] = $s->duedate;
+        }
+        // Finally add the assessment details into the calculator.
+        foreach ($assigns as $a) {
+            $grademax = $assign_ids[$a->id]->grademax;
+            $this->calculator->add_assessment($grademax, $submissions[$a->id], "Assignment: {$a->name}");
+        }
+    }
+    
     private function add_quizzes($grade_items) {
         global $DB;
 
