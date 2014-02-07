@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Output rendering of learn_analytics report
+ * Output rendering of learnanalytics report
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,16 +25,16 @@
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/pluginlib.php');
-require_once($CFG->dirroot . '/report/learn_analytics/locallib.php');
+require_once($CFG->dirroot . '/report/learnanalytics/locallib.php');
 
 /**
- * Rendering methods for the learn_analytics reports
+ * Rendering methods for the learnanalytics reports
  */
 
-abstract class learn_analyticsindicator_renderer extends plugin_renderer_base {
+abstract class learnanalyticsindicator_renderer extends plugin_renderer_base {
     public function user_report($data) {
         $value = sprintf("%.0f%%", 100 * $data->risk);
-        $html = html_writer::tag('span', get_string('riskscore', 'learn_analytics').": $value");
+        $html = html_writer::tag('span', get_string('riskscore', 'learnanalytics').": $value");
         return $html;
     }
 }

@@ -15,16 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Output rendering of learn_analytics report
+ * Output rendering of learnanalytics report
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-class learn_analyticsindicator_assessment_renderer extends learn_analyticsindicator_renderer {
+class learnanalyticsindicator_assessment_renderer extends learnanalyticsindicator_renderer {
     public function user_report($data) {
         $html = '';
         foreach ($data->info as $i) {
@@ -32,29 +32,29 @@ class learn_analyticsindicator_assessment_renderer extends learn_analyticsindica
             $html .= html_writer::tag('span', $i->assessment);
             $html .= html_writer::end_tag('strong');
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('status', 'learn_analyticsindicator_assessment');
+            $html .= $this->output->help_icon('status', 'learnanalyticsindicator_assessment');
             $html .= html_writer::tag('span', 'Status: ' . $i->submitted);
             if (isset($i->override)) {
                 $html .= html_writer::empty_tag('br');
-                $html .= $this->output->help_icon('override', 'learn_analyticsindicator_assessment');
+                $html .= $this->output->help_icon('override', 'learnanalyticsindicator_assessment');
                 $html .= html_writer::tag('span', 'Override: A ' . $i->override . ' override on due date is in place.');
             }
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('weighting', 'learn_analyticsindicator_assessment');
+            $html .= $this->output->help_icon('weighting', 'learnanalyticsindicator_assessment');
             $html .= html_writer::tag('span', 'Weighting: ' . $i->assessmentweighting);
             if (isset($i->dayslate)) {
                 $html .= html_writer::empty_tag('br');
-                $html .= $this->output->help_icon('dayslate', 'learn_analyticsindicator_assessment');
+                $html .= $this->output->help_icon('dayslate', 'learnanalyticsindicator_assessment');
                 $html .= html_writer::tag('span', 'Days late: ' .  $i->dayslate);
             }
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('localrisk', 'learn_analyticsindicator_assessment');
+            $html .= $this->output->help_icon('localrisk', 'learnanalyticsindicator_assessment');
             $html .= html_writer::tag('span', 'Local risk: ' . $i->localrisk);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('riskcontribution', 'learn_analyticsindicator_assessment');
+            $html .= $this->output->help_icon('riskcontribution', 'learnanalyticsindicator_assessment');
             $html .= html_writer::tag('span', 'Risk Contribution: ' .  $i->riskcontribution);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('logic', 'learn_analyticsindicator_assessment');
+            $html .= $this->output->help_icon('logic', 'learnanalyticsindicator_assessment');
             $html .= html_writer::tag('span', 'Logic: ' .  $i->logic);
             $html .= html_writer::empty_tag('br');
             $html .= html_writer::empty_tag('br');

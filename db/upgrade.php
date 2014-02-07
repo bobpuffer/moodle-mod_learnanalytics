@@ -15,34 +15,34 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Upgrades for learn_analytics
+ * Upgrades for learnanalytics
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-function xmldb_learn_analytics_upgrade($oldversion) {
+function xmldb_learnanalytics_upgrade($oldversion) {
     global $CFG, $DB;
 
     $dbman = $DB->get_manager();
 
     if ($oldversion < 2012061900) {
-        if (!$dbman->table_exists('learn_analytics_cache')) {
-            $dbman->install_one_table_from_xmldb_file($CFG->dirroot.'/mod/learn_analytics/db/install.xml', 'learn_analytics_cache');
+        if (!$dbman->table_exists('learnanalytics_cache')) {
+            $dbman->install_one_table_from_xmldb_file($CFG->dirroot.'/mod/learnanalytics/db/install.xml', 'learnanalytics_cache');
         }
-        upgrade_mod_savepoint(true, 2012061900, 'learn_analytics');
+        upgrade_mod_savepoint(true, 2012061900, 'learnanalytics');
     }
 
     if ($oldversion < 2012080700) {
-        $table = new xmldb_table('learn_analytics_cache');
+        $table = new xmldb_table('learnanalytics_cache');
         $field = new xmldb_field('rawdata');
         $field->set_attributes(XMLDB_TYPE_TEXT, 'big', null, null, null, null, null);
         if (!$dbman->field_exists($table, $field)) {
             $dbman->add_field($table, $field, 'settings');
         }
 
-        upgrade_mod_savepoint(true, 2012080700, 'learn_analytics');
+        upgrade_mod_savepoint(true, 2012080700, 'learnanalytics');
     }
 
     return true;

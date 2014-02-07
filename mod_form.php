@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -24,11 +24,11 @@ defined('MOODLE_INTERNAL') || die;
 
 require_once ($CFG->dirroot.'/course/moodleform_mod.php');
 
-class mod_learn_analytics_mod_form extends moodleform_mod {
+class mod_learnanalytics_mod_form extends moodleform_mod {
 
     function definition() {
         $mform = $this->_form;
 
-        print_error('incorrectlyconfigured', 'learn_analytics');
+        print_error('incorrectlyconfigured', 'learnanalytics');
     }
 }

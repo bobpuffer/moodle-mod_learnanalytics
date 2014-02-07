@@ -17,7 +17,7 @@
 /**
  * Plugin capabilities
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    'mod/learn_analytics:addinstance' => array(
+    'mod/learnanalytics:addinstance' => array(
         'riskbitmask' => RISK_XSS,
 
         'captype' => 'write',

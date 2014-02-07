@@ -14,9 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-function xmldb_learn_analytics_install() {
+function xmldb_learnanalytics_install() {
     global $DB;
 
     // Disable this module by default.
-    $DB->set_field('modules', 'visible', 0, array('name' => 'learn_analytics'));
+    $DB->set_field('modules', 'visible', 0, array('name' => 'learnanalytics'));
 }

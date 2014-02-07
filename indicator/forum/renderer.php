@@ -15,16 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Output rendering of learn_analytics report
+ * Output rendering of learnanalytics report
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-class learn_analyticsindicator_forum_renderer extends learn_analyticsindicator_renderer {
+class learnanalyticsindicator_forum_renderer extends learnanalyticsindicator_renderer {
     public function user_report($data) {
         $html = '';
         foreach ($data->info as $i) {
@@ -32,22 +32,22 @@ class learn_analyticsindicator_forum_renderer extends learn_analyticsindicator_r
             $html .= html_writer::tag('span', $i->title);
             $html .= html_writer::end_tag('strong');
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('weighting', 'learn_analyticsindicator_forum');
-            $html .= html_writer::tag('span', get_string('weighting', 'learn_analyticsindicator_forum').': ' . $i->weighting);
+            $html .= $this->output->help_icon('weighting', 'learnanalyticsindicator_forum');
+            $html .= html_writer::tag('span', get_string('weighting', 'learnanalyticsindicator_forum').': ' . $i->weighting);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('localrisk', 'learn_analyticsindicator_forum');
-            $html .= html_writer::tag('span', get_string('localrisk', 'learn_analyticsindicator_forum').': ' . $i->localrisk);
+            $html .= $this->output->help_icon('localrisk', 'learnanalyticsindicator_forum');
+            $html .= html_writer::tag('span', get_string('localrisk', 'learnanalyticsindicator_forum').': ' . $i->localrisk);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('riskcontribution', 'learn_analyticsindicator_forum');
-            $html .= html_writer::tag('span', get_string('riskcontribution', 'learn_analyticsindicator_forum').': ' .  $i->riskcontribution);
+            $html .= $this->output->help_icon('riskcontribution', 'learnanalyticsindicator_forum');
+            $html .= html_writer::tag('span', get_string('riskcontribution', 'learnanalyticsindicator_forum').': ' .  $i->riskcontribution);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('logic', 'learn_analyticsindicator_assessment');
-            $html .= html_writer::tag('span', get_string('logic', 'learn_analyticsindicator_forum').': ' .  $i->logic);
+            $html .= $this->output->help_icon('logic', 'learnanalyticsindicator_assessment');
+            $html .= html_writer::tag('span', get_string('logic', 'learnanalyticsindicator_forum').': ' .  $i->logic);
             $html .= html_writer::empty_tag('br');
             $html .= html_writer::empty_tag('br');
         }
         $value = sprintf("%.0f%%", 100 * $data->risk);
-        $html .= html_writer::tag('span', get_string('riskscore', 'learn_analytics').": $value");
+        $html .= html_writer::tag('span', get_string('riskscore', 'learnanalytics').": $value");
         return $html;
     }
 }

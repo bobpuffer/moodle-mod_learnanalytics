@@ -17,7 +17,7 @@
 /**
  * This file defines a class with login indicator logic
  *
- * @package    learn_analyticsindicator_login
+ * @package    learnanalyticsindicator_login
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -102,11 +102,11 @@ class indicator_login extends indicator {
         $risks = array();
         $sessions = $this->rawdata;
 
-        $strloginspastweek = get_string('eloginspastweek', 'learn_analyticsindicator_login');
-        $strloginsperweek = get_string('eloginsperweek', 'learn_analyticsindicator_login');
-        $stravgsessionlength = get_string('eavgsessionlength', 'learn_analyticsindicator_login');
-        $strtimesincelast = get_string('etimesincelast', 'learn_analyticsindicator_login');
-        $strmaxrisktitle = get_string('maxrisktitle', 'learn_analyticsindicator_login');
+        $strloginspastweek = get_string('eloginspastweek', 'learnanalyticsindicator_login');
+        $strloginsperweek = get_string('eloginsperweek', 'learnanalyticsindicator_login');
+        $stravgsessionlength = get_string('eavgsessionlength', 'learnanalyticsindicator_login');
+        $strtimesincelast = get_string('etimesincelast', 'learnanalyticsindicator_login');
+        $strmaxrisktitle = get_string('maxrisktitle', 'learnanalyticsindicator_login');
 
         foreach ($userids as $userid) {
             $risk = 0;
@@ -121,7 +121,7 @@ class indicator_login extends indicator {
                 $reason = new stdClass();
                 $reason->weighting = '100%';
                 $reason->localrisk = '100%';
-                $reason->logic = get_string('reasonnologin', 'learn_analyticsindicator_login');
+                $reason->logic = get_string('reasonnologin', 'learnanalyticsindicator_login');
                 $reason->riskcontribution = '100%';
                 $reason->title = $strmaxrisktitle;
                 $info->info = array($reason);
@@ -135,7 +135,7 @@ class indicator_login extends indicator {
             $reason = new stdClass();
             $reason->weighting = intval($this->config['w_loginspastweek']*100).'%';
             $reason->localrisk = intval($local_risk*100).'%';
-            $reason->logic = get_string('reasonloginspastweek', 'learn_analyticsindicator_login', $this->config['e_loginspastweek']);
+            $reason->logic = get_string('reasonloginspastweek', 'learnanalyticsindicator_login', $this->config['e_loginspastweek']);
             $reason->riskcontribution = intval($risk_contribution*100).'%';
             $reason->title = $strloginspastweek;
             $reasons[] = $reason;
@@ -152,7 +152,7 @@ class indicator_login extends indicator {
             $reason = new stdClass();
             $reason->weighting = intval($this->config['w_avgsessionlength']*100).'%';
             $reason->localrisk = intval($local_risk*100).'%';
-            $reason->logic = get_string('reasonavgsessionlen', 'learn_analyticsindicator_login', $this->config['e_avgsessionlength']);
+            $reason->logic = get_string('reasonavgsessionlen', 'learnanalyticsindicator_login', $this->config['e_avgsessionlength']);
             $reason->riskcontribution = intval($risk_contribution*100).'%';
             $reason->title = $stravgsessionlength;
             $reasons[] = $reason;
@@ -169,7 +169,7 @@ class indicator_login extends indicator {
             $reason = new stdClass();
             $reason->weighting = intval($this->config['w_loginsperweek']*100).'%';
             $reason->localrisk = intval($local_risk*100).'%';
-            $reason->logic = get_string('reasonloginsperweek', 'learn_analyticsindicator_login', $this->config['e_loginsperweek']);
+            $reason->logic = get_string('reasonloginsperweek', 'learnanalyticsindicator_login', $this->config['e_loginsperweek']);
             $reason->riskcontribution = intval($risk_contribution*100).'%';
             $reason->title = $strloginsperweek;
             $reasons[] = $reason;
@@ -182,7 +182,7 @@ class indicator_login extends indicator {
             $reason = new stdClass();
             $reason->weighting = intval($this->config['w_timesincelast']*100).'%';
             $reason->localrisk = intval($local_risk*100).'%';
-            $reason->logic = get_string('reasontimesincelogin', 'learn_analyticsindicator_login', $this->config['e_timesincelast'] / DAYSECS);
+            $reason->logic = get_string('reasontimesincelogin', 'learnanalyticsindicator_login', $this->config['e_timesincelast'] / DAYSECS);
             $reason->riskcontribution = intval($risk_contribution*100).'%';
             $reason->title = $strtimesincelast;
             $reasons[] = $reason;

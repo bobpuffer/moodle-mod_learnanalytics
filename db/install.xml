@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="mod/learn_analytics/db" VERSION="20120314" COMMENT="XMLDB file for Moodle mod/learn_analytics"
+<XMLDB PATH="mod/learnanalytics/db" VERSION="20120314" COMMENT="XMLDB file for Moodle mod/learnanalytics"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
-    <TABLE NAME="learn_analytics" COMMENT="Dummy table for learn_analytics" NEXT="learn_analytics_cache">
+    <TABLE NAME="learnanalytics" COMMENT="Dummy table for learnanalytics" NEXT="learnanalytics_cache">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="course"/>
         <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="id" NEXT="name"/>
@@ -20,7 +20,7 @@
         <INDEX NAME="course" UNIQUE="false" FIELDS="course"/>
       </INDEXES>
     </TABLE>
-    <TABLE NAME="learn_analytics_cache" COMMENT="Cache of learn_analytics results" PREVIOUS="learn_analytics" NEXT="learn_analytics_indicator">
+    <TABLE NAME="learnanalytics_cache" COMMENT="Cache of learnanalytics results" PREVIOUS="learnanalytics" NEXT="learnanalytics_indicator">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="indicator"/>
         <FIELD NAME="indicator" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="courseid"/>
@@ -38,7 +38,7 @@
         <INDEX NAME="indicator" UNIQUE="false" FIELDS="indicator" PREVIOUS="courseid-indicator"/>
       </INDEXES>
     </TABLE>
-    <TABLE NAME="learn_analytics_indicator" COMMENT="Dummy table for learn_analytics" PREVIOUS="learn_analytics_cache">
+    <TABLE NAME="learnanalytics_indicator" COMMENT="Dummy table for learnanalytics" PREVIOUS="learnanalytics_cache">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="name"/>
         <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="visible"/>

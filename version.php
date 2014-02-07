@@ -17,7 +17,7 @@
 /**
  * Version info
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die;
 
 $module->version   = 2013091100;       // The current plugin version (Date: YYYYMMDDXX)
 $module->requires  = 2011120500;       // Requires this Moodle version
-$module->component = 'mod_learn_analytics'; // Full name of the plugin (used for diagnostics).
+$module->component = 'mod_learnanalytics'; // Full name of the plugin (used for diagnostics).
 
 $module->maturity = MATURITY_STABLE;

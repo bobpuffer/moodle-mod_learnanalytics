@@ -17,7 +17,7 @@
 /**
  * This file defines functions used for the assessment indicator
  *
- * @package    learn_analyticsindicator_assessment
+ * @package    learnanalyticsindicator_assessment
  * @author     Adam Olley <adam.olley@netspot.com.au>
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
  * @param array $data
  * @return array
  */
-function learn_analyticsindicator_assessment_process_edit_form($data) {
+function learnanalyticsindicator_assessment_process_edit_form($data) {
     $configdata = array();
     $configdata['assessment_overduegracedays'] = $data->assessment_overduegracedays;
     $configdata['assessment_overduemaximumdays'] = $data->assessment_overduemaximumdays;

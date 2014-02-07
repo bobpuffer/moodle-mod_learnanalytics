@@ -15,12 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Defines the version of learn_analytics indicator subplugin
+ * Defines the version of learnanalytics indicator subplugin
  *
  * This code fragment is called by moodle_needs_upgrading() and
  * /admin/index.php
  *
- * @package    learn_analyticsindicator_login
+ * @package    learnanalyticsindicator_login
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -29,4 +29,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version  = 2012031400;
 $plugin->requires = 2010112400;  // Requires this Moodle version.
-$plugin->component = 'learn_analyticsindicator_login';
+$plugin->component = 'learnanalyticsindicator_login';

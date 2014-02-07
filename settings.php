@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Administration settings definitions for the learn_analytics module.
+ * Administration settings definitions for the learnanalytics module.
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -45,11 +45,11 @@ if ($ADMIN->fulltree) {
         180 => get_string('numminutes', '', 3),
         120 => get_string('numminutes', '', 2),
         60 => get_string('numminutes', '', 1),
-        0 => get_string('cachingdisabled', 'learn_analytics')
+        0 => get_string('cachingdisabled', 'learnanalytics')
     );
 
-    $settings->add(new admin_setting_pickroles('learn_analytics/roles', get_string('roles'),
-                        get_string('roles_desc', 'learn_analytics'), array('student')));
-    $settings->add(new admin_setting_configselect('learn_analytics/cachettl', get_string('cachettl', 'learn_analytics'),
-                        get_string('configcachettl', 'learn_analytics'), 3600, $cachetimes));
+    $settings->add(new admin_setting_pickroles('learnanalytics/roles', get_string('roles'),
+                        get_string('roles_desc', 'learnanalytics'), array('student')));
+    $settings->add(new admin_setting_configselect('learnanalytics/cachettl', get_string('cachettl', 'learnanalytics'),
+                        get_string('configcachettl', 'learnanalytics'), 3600, $cachetimes));
 }

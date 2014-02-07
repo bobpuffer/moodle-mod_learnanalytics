@@ -17,7 +17,7 @@
 /**
  * This file defines a class with forum indicator logic
  *
- * @package    learn_analyticsindicator_forum
+ * @package    learnanalyticsindicator_forum
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -107,11 +107,11 @@ class indicator_forum extends indicator {
     protected function calculate_risks(array $userids) {
         $risks = array();
 
-        $strtotalposts = get_string('e_totalposts', 'learn_analyticsindicator_forum');
-        $strreplies = get_string('e_replies', 'learn_analyticsindicator_forum');
-        $strreadposts = get_string('e_readposts', 'learn_analyticsindicator_forum');
-        $strnewposts = get_string('e_newposts', 'learn_analyticsindicator_forum');
-        $strmaxrisktitle = get_string('maxrisktitle', 'learn_analyticsindicator_forum');
+        $strtotalposts = get_string('e_totalposts', 'learnanalyticsindicator_forum');
+        $strreplies = get_string('e_replies', 'learnanalyticsindicator_forum');
+        $strreadposts = get_string('e_readposts', 'learnanalyticsindicator_forum');
+        $strnewposts = get_string('e_newposts', 'learnanalyticsindicator_forum');
+        $strmaxrisktitle = get_string('maxrisktitle', 'learnanalyticsindicator_forum');
 
         $startweek = date('W', $this->startdate);
         $this->currweek = date('W') - $startweek + 1;

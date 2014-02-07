@@ -17,7 +17,7 @@
 /**
  * Analytics subplugin types declaration
  *
- * @package    mod_learn_analytics
+ * @package    mod_learnanalytics
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,5 +25,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $subplugins = array(
-    'learn_analyticsindicator' => 'mod/learn_analytics/indicator',
+    'learnanalyticsindicator' => 'mod/learnanalytics/indicator',
 );
