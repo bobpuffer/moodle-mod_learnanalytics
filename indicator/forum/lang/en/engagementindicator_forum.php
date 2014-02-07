@@ -17,8 +17,8 @@
 /**
  * Strings
  *
- * @package    engagementindicator_forum
- * @copyright  2012 NetSpot Pty Ltd
+ * @package    learn_analyticsindicator_forum
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

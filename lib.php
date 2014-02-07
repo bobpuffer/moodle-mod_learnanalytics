@@ -17,10 +17,10 @@
 // This is not an actual activity module. This exists as a mod because...
 // ... other plugins aren't allowed to have sub-plugins.
 
-function engagement_add_instance($engagement, $mform) {
+function learn_analytics_add_instance($learn_analytics, $mform) {
     return false;
 }
 
-function engagement_update_instance($engagement, $mform) {
+function learn_analytics_update_instance($learn_analytics, $mform) {
     return false;
 }

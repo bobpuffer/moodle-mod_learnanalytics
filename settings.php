@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Administration settings definitions for the engagement module.
+ * Administration settings definitions for the learn_analytics module.
  *
- * @package    mod_engagement
- * @copyright  2012 NetSpot Pty Ltd.
+ * @package    mod_learn_analytics
+ * @copyright  2014 CLAMP.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -45,11 +45,11 @@ if ($ADMIN->fulltree) {
         180 => get_string('numminutes', '', 3),
         120 => get_string('numminutes', '', 2),
         60 => get_string('numminutes', '', 1),
-        0 => get_string('cachingdisabled', 'engagement')
+        0 => get_string('cachingdisabled', 'learn_analytics')
     );
 
-    $settings->add(new admin_setting_pickroles('engagement/roles', get_string('roles'),
-                        get_string('roles_desc', 'engagement'), array('student')));
-    $settings->add(new admin_setting_configselect('engagement/cachettl', get_string('cachettl', 'engagement'),
-                        get_string('configcachettl', 'engagement'), 3600, $cachetimes));
+    $settings->add(new admin_setting_pickroles('learn_analytics/roles', get_string('roles'),
+                        get_string('roles_desc', 'learn_analytics'), array('student')));
+    $settings->add(new admin_setting_configselect('learn_analytics/cachettl', get_string('cachettl', 'learn_analytics'),
+                        get_string('configcachettl', 'learn_analytics'), 3600, $cachetimes));
 }

@@ -17,9 +17,9 @@
 /**
  * This file defines a class with login indicator logic
  *
- * @package    engagementindicator_login
+ * @package    learn_analyticsindicator_login
  * @author     Adam Olley <adam.olley@netspot.com.au>
- * @copyright  2012 NetSpot Pty Ltd
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -28,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 require_once(dirname(__FILE__).'/../indicator.class.php');
 require_once(dirname(__FILE__).'/indicator.class.php');
 
-class engagementindicator_login_thresholds_form {
+class learn_analyticsindicator_login_thresholds_form {
 
     /**
      * Define the elements to be displayed in the form
@@ -43,10 +43,10 @@ class engagementindicator_login_thresholds_form {
         foreach ($elements as $element) {
             $grouparray = array();
             $grouparray[] =& $mform->createElement('text', "login_e_$element", '', array('size' => 5));
-            $grouparray[] =& $mform->createElement('static', '', '', get_string('weighting', 'report_engagement'));
+            $grouparray[] =& $mform->createElement('static', '', '', get_string('weighting', 'report_learn_analytics'));
             $grouparray[] =& $mform->createElement('text', "login_w_$element", '', array('size' => 3));
             $grouparray[] =& $mform->createElement('static', '', '', '%');
-            $mform->addGroup($grouparray, "group_loginspastweek", get_string("e$element", "engagementindicator_login"), '&nbsp;',
+            $mform->addGroup($grouparray, "group_loginspastweek", get_string("e$element", "learn_analyticsindicator_login"), '&nbsp;',
                 false);
             $mform->setDefault("login_e_$element", $defaults["e_$element"]);
             $mform->setDefault("login_w_$element", $defaults["w_$element"]*100);
@@ -54,7 +54,7 @@ class engagementindicator_login_thresholds_form {
             $mform->setType("login_w_$element", PARAM_FLOAT);
         }
 
-        $mform->addElement('text', 'login_session_length', get_string('sessionlength', 'engagementindicator_login'),
+        $mform->addElement('text', 'login_session_length', get_string('sessionlength', 'learn_analyticsindicator_login'),
             array('size' => 5));
         $mform->setDefault("login_session_length", $defaults["session_length"]);
         $mform->setType('login_session_length', PARAM_INT);

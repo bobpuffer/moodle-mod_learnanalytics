@@ -15,8 +15,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    mod_engagement
- * @copyright  2012 NetSpot Pty Ltd
+ * @package    mod_learn_analytics
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -24,11 +24,11 @@ defined('MOODLE_INTERNAL') || die;
 
 require_once ($CFG->dirroot.'/course/moodleform_mod.php');
 
-class mod_engagement_mod_form extends moodleform_mod {
+class mod_learn_analytics_mod_form extends moodleform_mod {
 
     function definition() {
         $mform = $this->_form;
 
-        print_error('incorrectlyconfigured', 'engagement');
+        print_error('incorrectlyconfigured', 'learn_analytics');
     }
 }

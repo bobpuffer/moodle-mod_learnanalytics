@@ -17,8 +17,8 @@
 /**
  * This file defines a class with forum indicator logic
  *
- * @package    engagementindicator_forum
- * @copyright  2012 NetSpot Pty Ltd
+ * @package    learn_analyticsindicator_forum
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -107,11 +107,11 @@ class indicator_forum extends indicator {
     protected function calculate_risks(array $userids) {
         $risks = array();
 
-        $strtotalposts = get_string('e_totalposts', 'engagementindicator_forum');
-        $strreplies = get_string('e_replies', 'engagementindicator_forum');
-        $strreadposts = get_string('e_readposts', 'engagementindicator_forum');
-        $strnewposts = get_string('e_newposts', 'engagementindicator_forum');
-        $strmaxrisktitle = get_string('maxrisktitle', 'engagementindicator_forum');
+        $strtotalposts = get_string('e_totalposts', 'learn_analyticsindicator_forum');
+        $strreplies = get_string('e_replies', 'learn_analyticsindicator_forum');
+        $strreadposts = get_string('e_readposts', 'learn_analyticsindicator_forum');
+        $strnewposts = get_string('e_newposts', 'learn_analyticsindicator_forum');
+        $strmaxrisktitle = get_string('maxrisktitle', 'learn_analyticsindicator_forum');
 
         $startweek = date('W', $this->startdate);
         $this->currweek = date('W') - $startweek + 1;

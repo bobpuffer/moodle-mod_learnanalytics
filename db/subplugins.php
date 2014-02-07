@@ -17,13 +17,13 @@
 /**
  * Analytics subplugin types declaration
  *
- * @package    mod_engagement
- * @copyright  2012 NetSpot Pty Ltd
+ * @package    mod_learn_analytics
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $subplugins = array(
-    'engagementindicator' => 'mod/engagement/indicator',
+    'learn_analyticsindicator' => 'mod/learn_analytics/indicator',
 );

@@ -15,26 +15,26 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Output rendering of engagement report
+ * Output rendering of learn_analytics report
  *
- * @package    mod_engagement
- * @copyright  2012 NetSpot Pty Ltd
+ * @package    mod_learn_analytics
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/pluginlib.php');
-require_once($CFG->dirroot . '/report/engagement/locallib.php');
+require_once($CFG->dirroot . '/report/learn_analytics/locallib.php');
 
 /**
- * Rendering methods for the engagement reports
+ * Rendering methods for the learn_analytics reports
  */
 
-abstract class engagementindicator_renderer extends plugin_renderer_base {
+abstract class learn_analyticsindicator_renderer extends plugin_renderer_base {
     public function user_report($data) {
         $value = sprintf("%.0f%%", 100 * $data->risk);
-        $html = html_writer::tag('span', get_string('riskscore', 'engagement').": $value");
+        $html = html_writer::tag('span', get_string('riskscore', 'learn_analytics').": $value");
         return $html;
     }
 }

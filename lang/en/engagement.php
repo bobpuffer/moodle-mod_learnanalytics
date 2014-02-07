@@ -18,25 +18,25 @@
  * Strings
  *
  * @package    mod
- * @subpackage engagement
+ * @subpackage learn_analytics
  * @copyright  NetSpot Pty Ltd
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['engagement:addinstance'] = 'Add an engagement instance'; // This should never appear. This mod is a container for sub-plugins.
+$string['learn_analytics:addinstance'] = 'Add an learn_analytics instance'; // This should never appear. This mod is a container for sub-plugins.
 $string['cachettl'] = 'Cache TTL';
 $string['cachingdisabled'] = 'Caching Disabled';
 $string['configcachettl'] = 'This setting specifies the Time To Live for cached
-engagement data.  If this is set, risk calculations displayed in the
+learn_analytics data.  If this is set, risk calculations displayed in the
 block will not necessarily reflect live data, but will instead will be
 calculated over the cached information.  Eg. new assignment submissions, logins
 etc will not be detected until the cached data expires.  This setting is
 important for performance reasons, so as to not overload the database with
 queries on high-traffic sites.';
 $string['incorrectlyconfigured'] = 'This plugin has been incorrectly configured. It is not intended to be added to a course in
-this fashion. Please contact your system administrator to set the mod_engagement plugin as hidden.';
-$string['modulename'] = 'Engagement analytics';
-$string['modulenameplural'] = 'Engagement analytics';
-$string['pluginname'] = 'Engagement analytics';
-$string['roles_desc'] = 'The roles to report on in the engagement block and reports';
+this fashion. Please contact your system administrator to set the mod_learn_analytics plugin as hidden.';
+$string['modulename'] = 'learn_analytics analytics';
+$string['modulenameplural'] = 'learn_analytics analytics';
+$string['pluginname'] = 'learn_analytics analytics';
+$string['roles_desc'] = 'The roles to report on in the learn_analytics block and reports';
 $string['riskscore'] = 'Risk score';

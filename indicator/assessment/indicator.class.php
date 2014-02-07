@@ -17,9 +17,9 @@
 /**
  * This file defines a class with assessment indicator logic
  *
- * @package    engagementindicator_assessment
+ * @package    learn_analyticsindicator_assessment
  * @author     Ashley Holman <ashley.holman@netspot.com.au>
- * @copyright  2012 NetSpot Pty Ltd
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

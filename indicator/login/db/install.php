@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-function xmldb_engagementindicator_login_install() {
+function xmldb_learn_analyticsindicator_login_install() {
     global $DB;
 
-    if (!$DB->record_exists('engagement_indicator', array('name' => 'login'))) {
+    if (!$DB->record_exists('learn_analytics_indicator', array('name' => 'login'))) {
         $indicator = new stdClass();
         $indicator->name = 'login';
         $indicator->visible = 1;
-        $DB->insert_record('engagement_indicator', $indicator);
+        $DB->insert_record('learn_analytics_indicator', $indicator);
     }
 }

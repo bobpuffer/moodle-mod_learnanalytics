@@ -17,9 +17,9 @@
 /**
  * This file defines a class with forum indicator logic
  *
- * @package    engagementindicator_forum
+ * @package    learn_analyticsindicator_forum
  * @author     Adam Olley <adam.olley@netspot.com.au>
- * @copyright  2012 NetSpot Pty Ltd
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -28,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 require_once(dirname(__FILE__).'/../indicator.class.php');
 require_once(dirname(__FILE__).'/indicator.class.php');
 
-class engagementindicator_forum_thresholds_form {
+class learn_analyticsindicator_forum_thresholds_form {
 
     /**
      * Define the elements to be displayed in the form
@@ -39,8 +39,8 @@ class engagementindicator_forum_thresholds_form {
      */
     public function definition_inner(&$mform) {
 
-        $strmaxrisk = get_string('maxrisk', 'engagementindicator_forum');
-        $strnorisk = get_string('norisk', 'engagementindicator_forum');
+        $strmaxrisk = get_string('maxrisk', 'learn_analyticsindicator_forum');
+        $strnorisk = get_string('norisk', 'learn_analyticsindicator_forum');
 
         $defaults = indicator_forum::get_defaults();
 
@@ -57,13 +57,13 @@ class engagementindicator_forum_thresholds_form {
             $mform->setDefault("forum_max_$element", $defaults["max_$element"]);
             $mform->setType("forum_max_$element", PARAM_FLOAT);
 
-            $grouparray[] =& $mform->createElement('static', '', '', get_string('weighting', 'report_engagement'));
+            $grouparray[] =& $mform->createElement('static', '', '', get_string('weighting', 'report_learn_analytics'));
             $grouparray[] =& $mform->createElement('text', "forum_w_$element", '', array('size' => 3));
             $mform->setDefault("forum_w_$element", $defaults["w_$element"]*100);
             $mform->setType("forum_w_$element", PARAM_FLOAT);
 
             $grouparray[] =& $mform->createElement('static', '', '', '%');
-            $mform->addGroup($grouparray, "group_forum_$element", get_string("e_$element", "engagementindicator_forum"), '&nbsp;',
+            $mform->addGroup($grouparray, "group_forum_$element", get_string("e_$element", "learn_analyticsindicator_forum"), '&nbsp;',
                 false);
         }
     }

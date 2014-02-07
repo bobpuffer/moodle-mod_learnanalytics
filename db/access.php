@@ -17,8 +17,8 @@
 /**
  * Plugin capabilities
  *
- * @package    mod_engagement
- * @copyright  2012 NetSpot Pty Ltd
+ * @package    mod_learn_analytics
+ * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    'mod/engagement:addinstance' => array(
+    'mod/learn_analytics:addinstance' => array(
         'riskbitmask' => RISK_XSS,
 
         'captype' => 'write',
