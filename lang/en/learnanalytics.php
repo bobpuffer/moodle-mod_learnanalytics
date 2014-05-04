@@ -40,3 +40,4 @@ $string['modulenameplural'] = 'Learning Analytics';
 $string['pluginname'] = 'Learning Analytics';
 $string['roles_desc'] = 'The roles to report on in the learnanalytics block and reports';
 $string['riskscore'] = 'Risk score';
+$string['subplugintype_learnanalyticsindicator'] = 'Learning Analytics Indicator';

@@ -15,17 +15,24 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version info
+ * Subplugin info class.
  *
- * @package    mod_learnanalytics
- * @copyright  2014 CLAMP
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   mod_workshop
+ * @copyright 2014 CLAMP (http://www.clamp-it.org)
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+namespace mod_learnanalytics\plugininfo;
 
-defined('MOODLE_INTERNAL') || die;
+use core\plugininfo\base;
 
-$module->version   = 2014050400;       // The current plugin version (Date: YYYYMMDDXX)
-$module->requires  = 2011120500;       // Requires this Moodle version
-$module->component = 'mod_learnanalytics'; // Full name of the plugin (used for diagnostics).
+defined('MOODLE_INTERNAL') || die();
 
-$module->maturity = MATURITY_STABLE;
+
+class learnanalyticsindicator extends core\plugininfo\base {
+    public function is_uninstall_allowed() {
+        if ($this->is_standard()) {
+            return false;
+        }
+        return true;
+    }
+}
