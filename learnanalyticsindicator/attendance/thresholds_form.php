@@ -17,7 +17,7 @@
 /**
  * This file defines a class with attendance indicator logic
  *
- * @package    engagementindicator_attendance
+ * @package    learnanalyticsindicator_attendance
  * @author     Dan Marsden <dan@danmarsden.com>
  * @copyright  2013 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -29,7 +29,7 @@ require_once(dirname(__FILE__).'/../indicator.class.php');
 require_once(dirname(__FILE__).'/indicator.class.php');
 require_once(dirname(__FILE__).'/locallib.php');
 
-class engagementindicator_attendance_thresholds_form {
+class learnanalyticsindicator_attendance_thresholds_form {
 
     /**
      * Define the elements to be displayed in the form
@@ -40,8 +40,8 @@ class engagementindicator_attendance_thresholds_form {
      */
     public function definition_inner(&$mform) {
 
-        $strmaxrisk = get_string('maxrisk', 'engagementindicator_forum');
-        $strnorisk = get_string('norisk', 'engagementindicator_forum');
+        $strmaxrisk = get_string('maxrisk', 'learnanalyticsindicator_forum');
+        $strnorisk = get_string('norisk', 'learnanalyticsindicator_forum');
         $courseid = optional_param('id', 0, PARAM_INT);
 
         $statuses = attendanceindicator_get_statuses($courseid);
@@ -60,7 +60,7 @@ class engagementindicator_attendance_thresholds_form {
             $mform->setType("attendance_max_$element", PARAM_FLOAT);
             $mform->setDefault("attendance_max_$element", 0);
 
-            $grouparray[] =& $mform->createElement('static', '', '', get_string('weighting', 'report_engagement'));
+            $grouparray[] =& $mform->createElement('static', '', '', get_string('weighting', 'report_learnanalytics'));
             $grouparray[] =& $mform->createElement('text', "attendance_w_$element", '', array('size' => 3));
             $mform->setType("attendance_w_$element", PARAM_FLOAT);
             $mform->setDefault("attendance_w_$element", 0);

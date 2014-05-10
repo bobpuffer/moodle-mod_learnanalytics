@@ -15,12 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Defines the version of engagement indicator subplugin
+ * Defines the version of learnanalytics indicator subplugin
  *
  * This code fragment is called by moodle_needs_upgrading() and
  * /admin/index.php
  *
- * @package    engagementindicator_attendance
+ * @package    learnanalyticsindicator_attendance
  * @author     Dan Marsden <dan@danmarsden.com>
  * @copyright  2013 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -30,4 +30,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version  = 2013071200;
 $plugin->requires = 2010112400;  // Requires this Moodle version.
-$plugin->component = 'engagementindicator_attendance';
+$plugin->component = 'learnanalyticsindicator_attendance';
