@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Output rendering of learnanalytics report
+ * Output rendering of engagement report
  *
- * @package    learnanalyticsindicator_attendance
+ * @package    engagementindicator_attendance
  * @author     Dan Marsden <dan@danmarsden.com>
  * @copyright  2013 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-class learnanalyticsindicator_attendance_renderer extends learnanalyticsindicator_renderer {
+class engagementindicator_attendance_renderer extends engagementindicator_renderer {
     public function user_report($data) {
         $html = '';
         foreach ($data->info as $i) {
@@ -35,16 +35,16 @@ class learnanalyticsindicator_attendance_renderer extends learnanalyticsindicato
             $html .= html_writer::empty_tag('br');
             $html .= html_writer::tag('span', 'Entries: ' . $i->entries);
             $html .= html_writer::empty_tag('br');
-            //$html .= $this->output->help_icon('weighting', 'learnanalyticsindicator_forum');
+            //$html .= $this->output->help_icon('weighting', 'engagementindicator_forum');
             $html .= html_writer::tag('span', 'Weighting: ' . $i->weighting);
             $html .= html_writer::empty_tag('br');
-            //$html .= $this->output->help_icon('localrisk', 'learnanalyticsindicator_forum');
+            //$html .= $this->output->help_icon('localrisk', 'engagementindicator_forum');
             $html .= html_writer::tag('span', 'Local risk: ' . $i->localrisk);
             $html .= html_writer::empty_tag('br');
-            //$html .= $this->output->help_icon('riskcontribution', 'learnanalyticsindicator_forum');
+            //$html .= $this->output->help_icon('riskcontribution', 'engagementindicator_forum');
             $html .= html_writer::tag('span', 'Risk Contribution: ' .  $i->riskcontribution);
             $html .= html_writer::empty_tag('br');
-            //$html .= $this->output->help_icon('logic', 'learnanalyticsindicator_assessment');
+            //$html .= $this->output->help_icon('logic', 'engagementindicator_assessment');
             $html .= html_writer::tag('span', 'Logic: ' .  $i->logic);
             $html .= html_writer::empty_tag('br');
             $html .= html_writer::empty_tag('br');

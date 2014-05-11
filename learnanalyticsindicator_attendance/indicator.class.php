@@ -17,7 +17,7 @@
 /**
  * This file defines a class with attendance indicator logic
  *
- * @package    learnanalyticsindicator_attendance
+ * @package    engagementindicator_attendance
  * @author     Dan Marsden <dan@danmarsden.com>
  * @copyright  2013 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -72,8 +72,8 @@ class indicator_attendance extends indicator {
 
     protected function calculate_risks(array $userids) {
         $risks = array();
-        $strmaxrisktitle = get_string('maxrisktitle', 'learnanalyticsindicator_forum');
-        $strentries = get_string('entriesperweek', 'learnanalyticsindicator_attendance');
+        $strmaxrisktitle = get_string('maxrisktitle', 'engagementindicator_forum');
+        $strentries = get_string('entriesperweek', 'engagementindicator_attendance');
 
         $startweek = date('W', $this->startdate);
         $this->currweek = date('W') - $startweek + 1;

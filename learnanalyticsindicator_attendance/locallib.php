@@ -17,7 +17,7 @@
 /**
  * This file defines functions used for the attendance indicator
  *
- * @package    learnanalyticsindicator_attendance
+ * @package    engagementindicator_attendance
  * @author     Dan Marsden <dan@danmarsden.com>
  * @copyright  2013 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
  * @param array $data
  * @return array
  */
-function learnanalyticsindicator_attendance_process_edit_form($data) {
+function engagementindicator_attendance_process_edit_form($data) {
     $configdata = array();
     $elements = attendanceindicator_get_statuses($data->id);
 

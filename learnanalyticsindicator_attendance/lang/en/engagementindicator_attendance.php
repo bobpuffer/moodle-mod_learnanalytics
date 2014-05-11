@@ -14,13 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-function xmldb_learnanalyticsindicator_attendance_install() {
-    global $DB;
+/**
+ * Strings
+ *
+ * @package    engagementindicator_attendance
+ * @author     Dan Marsden <dan@danmarsden.com>
+ * @copyright  2013 Catalyst IT
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
-    if (!$DB->record_exists('learnanalytics_indicator', array('name' => 'attendance'))) {
-        $indicator = new stdClass();
-        $indicator->name = 'attendance';
-        $indicator->visible = 1;
-        $DB->insert_record('learnanalytics_indicator', $indicator);
-    }
-}
+$string['pluginname'] = 'Attendance Activity';
+$string['entriesperweek'] = 'Entries per week';
