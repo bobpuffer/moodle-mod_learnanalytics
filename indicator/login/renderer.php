@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-class learnanalyticsindicator_login_renderer extends learnanalyticsindicator_renderer {
+class indicator_login_renderer extends indicator_renderer {
     public function user_report($data) {
         $html = '';
         foreach ($data->info as $i) {
@@ -32,17 +32,17 @@ class learnanalyticsindicator_login_renderer extends learnanalyticsindicator_ren
             $html .= html_writer::tag('span', $i->title);
             $html .= html_writer::end_tag('strong');
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('weighting', 'learnanalyticsindicator_login');
-            $html .= html_writer::tag('span', get_string('weighting', 'learnanalyticsindicator_login').': ' . $i->weighting);
+            $html .= $this->output->help_icon('weighting', 'indicator_login');
+            $html .= html_writer::tag('span', get_string('weighting', 'indicator_login').': ' . $i->weighting);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('localrisk', 'learnanalyticsindicator_login');
-            $html .= html_writer::tag('span', get_string('localrisk', 'learnanalyticsindicator_login').': ' . $i->localrisk);
+            $html .= $this->output->help_icon('localrisk', 'indicator_login');
+            $html .= html_writer::tag('span', get_string('localrisk', 'indicator_login').': ' . $i->localrisk);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('riskcontribution', 'learnanalyticsindicator_login');
-            $html .= html_writer::tag('span', get_string('riskcontribution', 'learnanalyticsindicator_login').': ' .  $i->riskcontribution);
+            $html .= $this->output->help_icon('riskcontribution', 'indicator_login');
+            $html .= html_writer::tag('span', get_string('riskcontribution', 'indicator_login').': ' .  $i->riskcontribution);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('logic', 'learnanalyticsindicator_assessment');
-            $html .= html_writer::tag('span', get_string('logic', 'learnanalyticsindicator_login').': ' .  $i->logic);
+            $html .= $this->output->help_icon('logic', 'indicator_assessment');
+            $html .= html_writer::tag('span', get_string('logic', 'indicator_login').': ' .  $i->logic);
             $html .= html_writer::empty_tag('br');
             $html .= html_writer::empty_tag('br');
         }

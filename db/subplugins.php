@@ -25,5 +25,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $subplugins = array(
-    'learnanalyticsindicator' => 'mod/learnanalytics/learnanalyticsindicator',
+    'indicator' => 'mod/learnanalytics/indicator',
 );

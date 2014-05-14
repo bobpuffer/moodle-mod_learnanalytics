@@ -17,7 +17,7 @@
 /**
  * This file defines a class with login indicator logic
  *
- * @package    learnanalyticsindicator_login
+ * @package    indicator_login
  * @author     Adam Olley <adam.olley@netspot.com.au>
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -28,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 require_once(dirname(__FILE__).'/../indicator.class.php');
 require_once(dirname(__FILE__).'/indicator.class.php');
 
-class learnanalyticsindicator_login_thresholds_form {
+class indicator_login_thresholds_form {
 
     /**
      * Define the elements to be displayed in the form
@@ -46,7 +46,7 @@ class learnanalyticsindicator_login_thresholds_form {
             $grouparray[] =& $mform->createElement('static', '', '', get_string('weighting', 'report_learnanalytics'));
             $grouparray[] =& $mform->createElement('text', "login_w_$element", '', array('size' => 3));
             $grouparray[] =& $mform->createElement('static', '', '', '%');
-            $mform->addGroup($grouparray, "group_loginspastweek", get_string("e$element", "learnanalyticsindicator_login"), '&nbsp;',
+            $mform->addGroup($grouparray, "group_loginspastweek", get_string("e$element", "indicator_login"), '&nbsp;',
                 false);
             $mform->setDefault("login_e_$element", $defaults["e_$element"]);
             $mform->setDefault("login_w_$element", $defaults["w_$element"]*100);
@@ -54,7 +54,7 @@ class learnanalyticsindicator_login_thresholds_form {
             $mform->setType("login_w_$element", PARAM_FLOAT);
         }
 
-        $mform->addElement('text', 'login_session_length', get_string('sessionlength', 'learnanalyticsindicator_login'),
+        $mform->addElement('text', 'login_session_length', get_string('sessionlength', 'indicator_login'),
             array('size' => 5));
         $mform->setDefault("login_session_length", $defaults["session_length"]);
         $mform->setType('login_session_length', PARAM_INT);

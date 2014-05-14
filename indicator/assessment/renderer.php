@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-class learnanalyticsindicator_assessment_renderer extends learnanalyticsindicator_renderer {
+class indicator_assessment_renderer extends indicator_renderer {
     public function user_report($data) {
         $html = '';
         foreach ($data->info as $i) {
@@ -32,29 +32,29 @@ class learnanalyticsindicator_assessment_renderer extends learnanalyticsindicato
             $html .= html_writer::tag('span', $i->assessment);
             $html .= html_writer::end_tag('strong');
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('status', 'learnanalyticsindicator_assessment');
+            $html .= $this->output->help_icon('status', 'indicator_assessment');
             $html .= html_writer::tag('span', 'Status: ' . $i->submitted);
             if (isset($i->override)) {
                 $html .= html_writer::empty_tag('br');
-                $html .= $this->output->help_icon('override', 'learnanalyticsindicator_assessment');
+                $html .= $this->output->help_icon('override', 'indicator_assessment');
                 $html .= html_writer::tag('span', 'Override: A ' . $i->override . ' override on due date is in place.');
             }
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('weighting', 'learnanalyticsindicator_assessment');
+            $html .= $this->output->help_icon('weighting', 'indicator_assessment');
             $html .= html_writer::tag('span', 'Weighting: ' . $i->assessmentweighting);
             if (isset($i->dayslate)) {
                 $html .= html_writer::empty_tag('br');
-                $html .= $this->output->help_icon('dayslate', 'learnanalyticsindicator_assessment');
+                $html .= $this->output->help_icon('dayslate', 'indicator_assessment');
                 $html .= html_writer::tag('span', 'Days late: ' .  $i->dayslate);
             }
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('localrisk', 'learnanalyticsindicator_assessment');
+            $html .= $this->output->help_icon('localrisk', 'indicator_assessment');
             $html .= html_writer::tag('span', 'Local risk: ' . $i->localrisk);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('riskcontribution', 'learnanalyticsindicator_assessment');
+            $html .= $this->output->help_icon('riskcontribution', 'indicator_assessment');
             $html .= html_writer::tag('span', 'Risk Contribution: ' .  $i->riskcontribution);
             $html .= html_writer::empty_tag('br');
-            $html .= $this->output->help_icon('logic', 'learnanalyticsindicator_assessment');
+            $html .= $this->output->help_icon('logic', 'indicator_assessment');
             $html .= html_writer::tag('span', 'Logic: ' .  $i->logic);
             $html .= html_writer::empty_tag('br');
             $html .= html_writer::empty_tag('br');

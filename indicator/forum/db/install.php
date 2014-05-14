@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-function xmldb_learnanalyticsindicator_forum_install() {
+function xmldb_indicator_forum_install() {
     global $DB;
 
     if (!$DB->record_exists('learnanalytics_indicator', array('name' => 'forum'))) {

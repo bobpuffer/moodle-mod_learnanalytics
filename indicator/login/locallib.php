@@ -17,7 +17,7 @@
 /**
  * This file defines functions used for the login indicator
  *
- * @package    learnanalyticsindicator_login
+ * @package    indicator_login
  * @author     Adam Olley <adam.olley@netspot.com.au>
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
  * @param array $data
  * @return array
  */
-function learnanalyticsindicator_login_process_edit_form($data) {
+function indicator_login_process_edit_form($data) {
     $configdata = array();
     $elements = array('loginspastweek', 'loginsperweek', 'avgsessionlength', 'timesincelast');
     foreach ($elements as $element) {

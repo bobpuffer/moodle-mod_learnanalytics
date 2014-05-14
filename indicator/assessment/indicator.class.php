@@ -17,7 +17,7 @@
 /**
  * This file defines a class with assessment indicator logic
  *
- * @package    learnanalyticsindicator_assessment
+ * @package    indicator_assessment
  * @author     Ashley Holman <ashley.holman@netspot.com.au>
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

@@ -20,7 +20,7 @@
  * This code fragment is called by moodle_needs_upgrading() and
  * /admin/index.php
  *
- * @package    learnanalyticsindicator_login
+ * @package    indicator_login
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -29,4 +29,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version  = 2012033000;
 $plugin->requires = 2010112400;  // Requires this Moodle version.
-$plugin->component = 'learnanalyticsindicator_assessment';
+$plugin->component = 'indicator_assessment';

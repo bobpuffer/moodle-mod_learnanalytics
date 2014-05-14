@@ -31,7 +31,7 @@ require_once($CFG->dirroot . '/report/learnanalytics/locallib.php');
  * Rendering methods for the learnanalytics reports
  */
 
-abstract class learnanalyticsindicator_renderer extends plugin_renderer_base {
+abstract class indicator_renderer extends plugin_renderer_base {
     public function user_report($data) {
         $value = sprintf("%.0f%%", 100 * $data->risk);
         $html = html_writer::tag('span', get_string('riskscore', 'learnanalytics').": $value");

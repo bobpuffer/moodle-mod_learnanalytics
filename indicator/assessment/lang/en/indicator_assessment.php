@@ -17,7 +17,7 @@
 /**
  * Strings
  *
- * @package    learnanalyticsindicator_login
+ * @package    indicator_login
  * @copyright  2014 CLAMP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
